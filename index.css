@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  background-color: honeydew;
+  color: lightslategrey;
+}
+
+main {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  color: rgb(17, 197, 17);
+  overflow-x: hidden;
+}
+.container {
+  text-align: center;
+  margin: 2rem;
+  z-index: 1;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+main h1 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2rem;
+}
+main h2 {
+  margin-bottom: 1rem;
+}
+main h4 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.btn {
+  text-transform: uppercase;
+  background-color: honeydew;
+  border-style: none;
+  border-radius: 6px;
+  padding: 1rem;
+  color: lightslategrey;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  border: 1px solid lightslategrey;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+#send {
+  padding: 0.5rem;
+}
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+  color: lightslategrey;
+  background-color: honeydew;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  border-style: none;
+  z-index: 99;
+}
+.chatbox-overlay {
+  min-height: 80vh;
+  width: 800px;
+  background: lightgoldenrodyellow;
+  background-position: center;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transform: translateX(200%);
+  -webkit-transform: translateX(200%);
+  overflow-x: hidden;
+  z-index: 2;
+}
+.chatbox {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+.chatbox span {
+  color: lightslategrey;
+}
+.chatbox-overlay input {
+  line-height: 2rem;
+  font-size: 16px;
+  border: none;
+  color: lightslategrey;
+}
+.chatbox-overlay input:focus {
+  outline: none;
+}
+.user-input {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.chatbox .user {
+  background-color: yellowgreen;
+  border-radius: 0px 10px 0px 10px;
+  padding: 0.5rem;
+  width: 55%;
+  align-self: flex-end;
+  color: white;
+}
+.chatbox .user,
+.chatbox .bot {
+  margin-bottom: 0.5rem;
+}
+
+.show-chat {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+}
+
+footer {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  background-color: honeydew;
+  color: lightslategrey;
+  letter-spacing: 0.5rem;
+}
+footer a {
+  text-decoration: none;
+  color: lightslategrey;
+}
+
+@media (max-width: 945px) {
+  .chatbox-overlay {
+    width: 600px;
+  }
+}
+@media (max-width: 575px) {
+  .chatbox-overlay {
+    width: 100vw;
+    padding: 0.5rem;
+  }
+  .hide {
+    display: none;
+  }
+  main,
+  .chatbox-overlay {
+    height: 85vh;
+  }
+  footer {
+    height: 5vh;
+  }
+}
